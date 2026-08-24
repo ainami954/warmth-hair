@@ -28,8 +28,8 @@ a{color:inherit}
   backdrop-filter:blur(8px);border-bottom:1px solid var(--usu)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;
   height:64px;gap:24px}
-.mark{font-family:var(--mincho);font-size:22px;letter-spacing:.22em;
-  text-decoration:none;line-height:1}
+.mark{display:inline-flex;align-items:center;text-decoration:none;line-height:1}
+.mark-logo{display:block;width:112px;height:auto}
 .navlinks{display:flex;gap:26px;font-size:13px;letter-spacing:.1em}
 .navlinks a{text-decoration:none;color:var(--muted);padding-bottom:2px;
   border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
@@ -195,7 +195,7 @@ a{color:inherit}
 .foot{background:var(--sumi);color:#A9B2B8;padding:52px 0 40px;font-size:12px}
 .foot .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
   align-items:flex-end}
-.foot .mark{color:var(--washi);font-size:20px}
+.foot .mark-logo{width:104px}
 .foot a{color:#A9B2B8;text-decoration:none;margin-left:20px;
   letter-spacing:.1em}
 .foot a:hover{color:var(--washi)}
