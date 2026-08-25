@@ -65,9 +65,13 @@ a{color:inherit}
 .photo-hero img{object-position:right center}
 @media(max-width:900px){
   .hero .wrap{grid-template-columns:1fr}
-  .vtitle{writing-mode:horizontal-tb;height:auto;font-size:clamp(26px,7vw,34px);
-    line-height:1.75;letter-spacing:.08em}
-  .photo-hero{aspect-ratio:4/3}
+  .vtitle{grid-column:1;grid-row:1;align-self:center;z-index:1;
+    writing-mode:horizontal-tb;width:fit-content;height:auto;
+    font-size:clamp(26px,7vw,34px);line-height:1.75;letter-spacing:.08em}
+  .vtitle .marker{padding:0 8px;
+    background:linear-gradient(to bottom,transparent 30%,rgba(237,238,232,.86) 30%) center/90% 100% no-repeat}
+  .photo-hero{grid-column:1;grid-row:1;aspect-ratio:4/3}
+  .heroside{grid-column:1;grid-row:2}
 }
 
 /* ---------- section shell ---------- */
