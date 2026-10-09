@@ -59,11 +59,11 @@ a{color:inherit}
 /* ---------- hero ---------- */
 .hero{padding:72px 0 88px;border-bottom:1px solid var(--usu)}
 .hero .wrap{display:grid;grid-template-columns:auto 1fr 1.05fr;gap:48px;
-  align-items:start}
+  align-items:stretch}
 .vtitle{
   writing-mode:vertical-rl;font-family:var(--mincho);font-weight:600;
   font-size:clamp(30px,3.4vw,42px);line-height:1.7;letter-spacing:.16em;
-  height:400px;margin:0;
+  height:auto;align-self:start;margin:0;
 }
 .vtitle .em{color:var(--kincha)}
 .heroside{padding-top:8px}
@@ -79,8 +79,10 @@ a{color:inherit}
 .photo img{width:100%;height:100%;object-fit:cover}
 .photo::after{content:attr(data-label);position:absolute;left:14px;bottom:12px;
   font-size:11px;letter-spacing:.14em;color:var(--muted)}
-.photo-hero{aspect-ratio:4/5}
-.photo-hero img{object-position:right center}
+.hero .photo-hero{min-width:0;min-height:0}
+.hero .photo-hero img{position:absolute;inset:0;display:block;
+  width:auto;height:auto;max-width:100%;max-height:100%;margin:auto;
+  object-fit:contain;object-position:center}
 @media(max-width:900px){
   .hero .wrap{grid-template-columns:1fr}
   .vtitle{grid-column:1;grid-row:1;align-self:center;z-index:1;
@@ -88,7 +90,8 @@ a{color:inherit}
     font-size:clamp(26px,7vw,34px);line-height:1.75;letter-spacing:.08em}
   .vtitle .marker{padding:0 8px;
     background:linear-gradient(to bottom,transparent 30%,rgba(237,238,232,.86) 30%) center/90% 100% no-repeat}
-  .photo-hero{grid-column:1;grid-row:1;aspect-ratio:4/3}
+  .photo-hero{grid-column:1;grid-row:1}
+  .hero .photo-hero img{position:static;width:100%;height:auto;max-height:none}
   .heroside{grid-column:1;grid-row:2}
 }
 
